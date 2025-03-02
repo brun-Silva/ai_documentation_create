@@ -1,0 +1,44 @@
+code_architect_task:
+  description: >
+    Identify architectural patterns and anti-patterns across the entire project.
+    Map critical dependencies between modules.
+  expected_output: >
+    A Markdown report including:
+    - A diagram of relationships between components
+    - A list of identified patterns
+    - Refactoring recommendations
+    Context:
+      File content: {file_content}
+      Project structure: {tree_project}
+      File path: {file_path}
+  agent: code_architect_agent
+
+doc_integrator_task:
+  description: >
+    Synthesize all individual file summaries into coherent documentation following the ISO/IEC/IEEE 26515 standard.
+  expected_output: >
+    Complete modular documentation containing:
+    - System overview
+    - Architecture guide
+    - API reference
+    - Decision records
+    Context:
+      File content: {file_content}
+      Project structure: {tree_project}
+      File path: {file_path}
+  agent: doc_integrator_agent
+
+cross_validation_task:
+  description: >
+    Perform cross-verification between the generated documentation and the source code.
+    Ensure that all functionalities are adequately documented.
+  expected_output: >
+    A quality report featuring:
+    - Documentation coverage rate
+    - List of discrepancies
+    - Improvement suggestions
+    Context:
+      File content: {file_content}
+      Project structure: {tree_project}
+      File path: {file_path}
+  agent: cross_validation_agent

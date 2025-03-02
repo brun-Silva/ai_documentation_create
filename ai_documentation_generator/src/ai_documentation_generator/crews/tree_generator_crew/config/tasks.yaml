@@ -1,0 +1,19 @@
+tree_generator_task:
+  description: >
+    Given a list of file paths, create a hierarchical tree structure that represents the project's 
+    folder and file organization. Use indentation and branch symbols (e.g., ├──, └──) to illustrate 
+    the relationships between directories and files.
+    Analyze the provided file paths and create a simplified ASCII tree structure
+    that accurately represents the project's organization. Follow these rules:
+    1. Use '├─' for branches and '└─' for final items
+    2. Show directory nesting with proper indentation
+    The files : ({files})
+  expected_output: >
+    Clean markdown-compatible tree structure showing:
+    - Root directory name
+    - Main subdirectories and their contents
+    - File type indicators
+    - Ignored folders marker
+    - Depth-limited hierarchy
+    A simplified tree structure of the project directory.
+  agent: tree_generator_agent
