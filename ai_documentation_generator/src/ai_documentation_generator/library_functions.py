@@ -65,4 +65,4 @@ def extrair_conteudo_arquivo(caminho, extensoes_ignorar=None, encoding='utf-8'):
 
 def append_to_resume(text, filename="RESUME.txt"):
     with open(filename, "a", encoding="utf-8") as file:
-        file.write(text + "\n___________________________________________________________________________________")
+        file.write(text + "___________________________________________________________________________________\n")
